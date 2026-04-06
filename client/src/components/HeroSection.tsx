@@ -30,7 +30,7 @@ export default function HeroSection() {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
-            Centro de servicios automotrices multimarca ubicado en Cra 15 # 6-134 San Bosco. Cambio de aceite 100% sintético, reparación de motores, pintura, trámites de tránsito y mucho más.
+            Con 18 años de experiencia en la Cra 15 # 6-134 San Bosco. Nos especializamos en cambio de aceite sintético, reparación de motores, pintura, trámites de tránsito y todos los servicios automotrices que necesites.
           </p>
 
           {/* Features */}

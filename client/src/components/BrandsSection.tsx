@@ -36,10 +36,10 @@ export default function BrandsSection() {
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-1 bg-accent"></div>
-            <span className="text-accent font-mono text-sm font-semibold">MARCAS DE ACEITE</span>
+            <span className="text-accent font-mono text-sm font-semibold">Marcas de aceite</span>
           </div>
           <h3 className="text-3xl font-bold text-white mb-8">
-            Productos Premium de Lubricación
+            Trabajamos con las mejores marcas del mercado
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {oilBrands.map((brand, index) => (
@@ -62,10 +62,10 @@ export default function BrandsSection() {
         <div>
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-1 bg-accent"></div>
-            <span className="text-accent font-mono text-sm font-semibold">MARCAS DE VEHÍCULOS</span>
+            <span className="text-accent font-mono text-sm font-semibold">Marcas de vehículos</span>
           </div>
           <h3 className="text-3xl font-bold text-white mb-8">
-            Tecnología Multimarca Certificada
+            Servicio para todas las marcas
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {carBrands.map((brand, index) => (
@@ -84,7 +84,7 @@ export default function BrandsSection() {
         {/* Additional Services Note */}
         <div className="mt-12 bg-background border-2 border-accent rounded-sm p-6">
           <p className="text-white text-center">
-            <span className="font-bold text-accent">Servicio Completo:</span> Polarizados, cambio de llantas, alineación, balanceo y todos los servicios automotrices que necesites.
+            <span className="font-bold text-accent">Y mucho más:</span> Polarizados, cambio de llantas, alineación, balanceo y todos los servicios automotrices que necesites.
           </p>
         </div>
       </div>

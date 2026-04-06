@@ -4,7 +4,7 @@ const features = [
   {
     icon: Award,
     title: 'Productos Garantizados',
-    description: 'Todos nuestros productos cuentan con garantía de fabricante. Protegemos la vida de tu motor con los mejores estándares de calidad.',
+    description: 'Usamos solo productos con garantía de fabricante. Protegemos tu motor con los mejores estándares de calidad del mercado.',
   },
   {
     icon: Zap,
@@ -34,10 +34,10 @@ export default function FeaturesSection() {
             <span className="text-accent font-mono text-sm font-semibold">POR QUÉ ELEGIRNOS</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Tu Aliado de Confianza en la Carrera 15
+            18 Años de Confianza en la Carrera 15
           </h2>
           <p className="text-lg text-gray-400">
-            Más de años de experiencia en servicios automotrices profesionales. Somos el centro de referencia para mantenimiento preventivo y reparaciones.
+            Durante 18 años hemos sido el taller de referencia en Cali para mantenimiento preventivo, reparaciones especializadas y servicios técnicos de calidad. Nuestros clientes confían en nosotros porque entregamos resultados.
           </p>
         </div>
 

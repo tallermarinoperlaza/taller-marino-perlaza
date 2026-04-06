@@ -4,49 +4,49 @@ const services = [
   {
     icon: Droplet,
     title: 'Cambio de Aceite',
-    description: 'Cambio de aceite 100% sintético, semisintético y mineral con las mejores marcas: ELF, Mobil, Motul, Hyundai, Pure Guard, Chevron, Havoline, Mazda, Total Energies, Petronas, Motorcraft, Kixx y más.',
+    description: 'Cambio de aceite con las mejores marcas del mercado: ELF, Mobil, Motul, Hyundai, Pure Guard, Chevron, Havoline, Mazda, Total Energies, Petronas, Motorcraft y Kixx. Sintético, semisintético o mineral según tu vehículo.',
     color: 'text-orange-500',
   },
   {
     icon: Wrench,
     title: 'Filtros y Revisión',
-    description: 'Cambio de filtros de aceite, aire y cabina. Revisión de niveles y escaneo básico del motor para asegurar el óptimo funcionamiento.',
+    description: 'Cambio de filtros de aceite, aire y cabina. Revisamos los niveles de fluidos y hacemos escaneo del motor para detectar problemas antes de que se conviertan en daños mayores.',
     color: 'text-red-500',
   },
   {
     icon: Gauge,
     title: 'Diagnóstico Técnico',
-    description: 'Servicio de escáner avanzado para diagnóstico completo del motor. Identificamos problemas antes de que se conviertan en daños mayores.',
+    description: 'Usamos escáner avanzado para diagnosticar tu motor con precisión. Identificamos cualquier problema para que puedas tomar decisiones informadas sobre tu vehículo.',
     color: 'text-orange-500',
   },
   {
     icon: Zap,
     title: 'Reparación de Motores',
-    description: 'Reparación especializada de motores a gasolina y diésel. Sincronización, revisión de componentes internos y restauración completa.',
+    description: 'Reparamos motores a gasolina y diésel con experiencia de 18 años. Sincronización, revisión interna y restauración completa para que tu motor vuelva a funcionar como nuevo.',
     color: 'text-red-500',
   },
   {
     icon: Paintbrush,
     title: 'Pintura y Lámina',
-    description: 'Servicios profesionales de pintura automotriz y reparación de lámina. Restauramos la apariencia de tu vehículo como nuevo.',
+    description: 'Pintura profesional y reparación de lámina. Restauramos tu vehículo a su condición original con acabado de calidad.',
     color: 'text-orange-500',
   },
   {
     icon: Shield,
     title: 'Frenos y Suspensión',
-    description: 'Revisión y reparación completa de sistemas de frenos. Mantenimiento de suspensión para una conducción segura y cómoda.',
+    description: 'Revisamos y reparamos tu sistema de frenos para garantizar tu seguridad. Mantenimiento de suspensión para una conducción segura y cómoda.',
     color: 'text-red-500',
   },
   {
     icon: Lightbulb,
     title: 'Cajas Automáticas',
-    description: 'Servicio especializado en reparación de cajas automáticas. Diagnóstico preciso y reparación con garantía.',
+    description: 'Especializados en reparación de cajas automáticas. Diagnóstico preciso y reparación con garantía para tu tranquilidad.',
     color: 'text-orange-500',
   },
   {
     icon: FileText,
     title: 'Trámites de Tránsito',
-    description: 'Asesoría completa en trámites: traspasos nacionales, levantamiento de prenda, licencias de conducción, multas y cursos viales.',
+    description: 'Te asesoramos en traspasos nacionales, levantamiento de prenda, licencias de conducción, multas y cursos viales. Simplificamos los trámites para ti.',
     color: 'text-red-500',
   },
 ];
@@ -59,13 +59,13 @@ export default function ServicesSection() {
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-1 bg-accent"></div>
-            <span className="text-accent font-mono text-sm font-semibold">SERVICIOS COMPLETOS</span>
+            <span className="text-accent font-mono text-sm font-semibold">Nuestros servicios</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Todos los Servicios Automotrices en un Solo Lugar
+            Todo lo que tu vehículo necesita en un solo lugar
           </h2>
           <p className="text-lg text-gray-400">
-            Desde lubricación preventiva hasta reparaciones complejas, somos tu aliado completo en mantenimiento automotriz.
+            Desde cambios de aceite hasta reparaciones complejas, contamos con la experiencia y tecnología para cuidar tu auto.
           </p>
         </div>
 

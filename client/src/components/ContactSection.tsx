@@ -8,13 +8,13 @@ export default function ContactSection() {
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-1 bg-accent"></div>
-            <span className="text-accent font-mono text-sm font-semibold">CONTÁCTANOS</span>
+            <span className="text-accent font-mono text-sm font-semibold">Contacto</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ubicación y Horarios
+            Encuéntranos en la Carrera 15
           </h2>
           <p className="text-lg text-gray-400">
-            Visítanos en la Carrera 15 de Cali. Estamos listos para atender tus necesidades automotrices.
+            Estamos en San Bosco, listos para atender tus necesidades automotrices. Llámanos o visítanos cuando lo necesites.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">Correo</h3>
                 <p className="text-gray-400">
-                  info@tallermarino.com
+                  tallermarinoperlaza@gmail.com
                 </p>
               </div>
             </div>

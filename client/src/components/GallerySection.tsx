@@ -29,13 +29,13 @@ export default function GallerySection() {
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-1 bg-accent"></div>
-            <span className="text-accent font-mono text-sm font-semibold">GALERÍA DE SERVICIOS</span>
+            <span className="text-accent font-mono text-sm font-semibold">Galería</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Nuestro Trabajo en Acción
+            Nuestro trabajo en acción
           </h2>
           <p className="text-lg text-gray-400">
-            Equipamiento profesional y técnicos especializados para garantizar la máxima calidad en cada servicio.
+            Contamos con equipamiento profesional y técnicos especializados para garantizar calidad en cada servicio.
           </p>
         </div>
 
