@@ -32,7 +32,7 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">Ubicación</h3>
                 <p className="text-gray-400">
-                  Carrera 15, Cali, Valle del Cauca, Colombia
+                  Cra 15 # 6-134 San Bosco, Cali, Valle del Cauca, Colombia
                 </p>
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">Teléfono</h3>
                 <p className="text-gray-400">
-                  +57 (2) XXXX-XXXX
+                  3173739444 - 3146433367
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">Correo</h3>
                 <p className="text-gray-400">
-                  info@tualiado.com
+                  info@tallermarino.com
                 </p>
               </div>
             </div>

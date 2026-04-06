@@ -19,11 +19,11 @@ export default function Header() {
           <div className="flex items-center gap-4 text-muted-foreground">
             <div className="flex items-center gap-2">
               <MapPin size={16} className="text-accent" />
-              <span>Carrera 15, Cali</span>
+              <span>Cra 15 # 6-134 San Bosco</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone size={16} className="text-accent" />
-              <span>+57 (2) XXXX-XXXX</span>
+              <span>3173739444 - 3146433367</span>
             </div>
           </div>
           <div className="text-muted-foreground text-xs">
@@ -35,13 +35,15 @@ export default function Header() {
       {/* Main Navigation */}
       <div className="container flex justify-between items-center py-4">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
-            <span className="text-background font-bold text-lg">⚙</span>
-          </div>
-          <div className="flex flex-col">
-            <h1 className="text-lg font-bold text-white">Tu Aliado</h1>
-            <p className="text-xs text-accent">Automotriz</p>
+        <div className="flex items-center gap-3">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663455322151/FLskSa64sSEiX3FbGopjSq/taller-marino-perlaza-logo_495bca4a.png"
+            alt="Taller Marino Perlaza"
+            className="h-12 w-auto"
+          />
+          <div className="flex flex-col hidden sm:block">
+            <h1 className="text-sm font-bold text-white">Taller Marino</h1>
+            <p className="text-xs text-accent">Perlaza</p>
           </div>
         </div>
 

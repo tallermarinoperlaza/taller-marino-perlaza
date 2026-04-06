@@ -8,12 +8,13 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 /**
- * Design System: Industrial Modern Theme
+ * Taller Marino Perlaza - Design System: Industrial Modern Theme
  * - Dark background (#1a1a1a) with red (#d32f2f) and orange (#ff6f00) accents
  * - Roboto typography for professional, technical feel
  * - Minimal animations with 200ms transitions
  * - Straight edges, no excessive rounding
- * - Technical iconography throughout
+ * - Professional logo integration in header and footer
+ * - Complete branding with correct contact information
  */
 
 export default function Home() {

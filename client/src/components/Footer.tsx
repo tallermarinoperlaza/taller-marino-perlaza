@@ -10,15 +10,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-sm flex items-center justify-center">
-                <span className="text-background font-bold">⚙</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-white">Tu Aliado</h3>
-                <p className="text-xs text-accent">Automotriz</p>
-              </div>
-            </div>
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663455322151/FLskSa64sSEiX3FbGopjSq/taller-marino-perlaza-logo_495bca4a.png"
+              alt="Taller Marino Perlaza"
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-gray-400 text-sm">
               Centro de servicios multimarca especializado en lubricación y mantenimiento preventivo en Cali.
             </p>
@@ -68,8 +64,8 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>&copy; {currentYear} Tu Aliado Automotriz. Todos los derechos reservados.</p>
-          <p>Carrera 15, Cali, Valle del Cauca, Colombia</p>
+          <p>&copy; {currentYear} Taller Marino Perlaza. Todos los derechos reservados.</p>
+          <p>Cra 15 # 6-134 San Bosco, Cali, Valle del Cauca, Colombia</p>
         </div>
       </div>
     </footer>
