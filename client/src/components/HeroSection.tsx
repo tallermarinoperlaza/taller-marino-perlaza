@@ -27,7 +27,7 @@ export default function HeroSection() {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
-            Con 18 años de experiencia en la Cra 15 # 6-134 San Bosco. Nos especializamos en  reparación de motores, mecánica general, lamina, pintura, cambio de aceite sintético, trámites de tránsito y todos los servicios automotrices que necesites.
+            Nos especializamos en reparación de motores, mecánica general, sincronización, frenos, suspensión, lamina, pintura, cambio de aceite motor, trámites de tránsito y todos los servicios automotrices que necesites, en un solo lugar.
           </p>
 
           {/* Features */}
