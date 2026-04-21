@@ -49,7 +49,9 @@ export default function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col md:flex-row gap-4 pt-4">
             <a
-              href="mailto:tallermarinoperlaza@gmail.com?subject=Solicitud%20de%20Servicio&body=Hola%20Taller%20Marino%20Perlaza,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios."
+              href="https://wa.me/573173739444?text=Hola%20Taller%20Marino%20Perlaza,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios%20automotrices."
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-industrial flex items-center gap-2 group inline-block"
             >
               Solicitar Servicio

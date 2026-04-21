@@ -1,6 +1,77 @@
+'use client';
+
+import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
+import { toast } from 'sonner';
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    nombre: '',
+    email: '',
+    telefono: '',
+    vehiculo: '',
+    servicio: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Enviar al backend de Manus
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nombre: formData.nombre,
+          email: formData.email,
+          telefono: formData.telefono,
+          vehiculo: formData.vehiculo,
+          servicio: formData.servicio,
+          timestamp: new Date().toISOString()
+        })
+      });
+
+      if (response.ok) {
+        toast.success('¡Solicitud enviada exitosamente! Nos contactaremos pronto.', {
+          duration: 4000,
+        });
+        
+        // Limpiar formulario
+        setFormData({
+          nombre: '',
+          email: '',
+          telefono: '',
+          vehiculo: '',
+          servicio: ''
+        });
+      } else {
+        toast.error('Error al enviar la solicitud. Intenta nuevamente.', {
+          duration: 4000,
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('Error de conexión. Por favor intenta de nuevo.', {
+        duration: 4000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const handleWhatsAppClick = () => {
     const message = "Hola Taller Marino Perlaza, me gustaría solicitar información sobre sus servicios.";
     const whatsappUrl = `https://wa.me/573173739444?text=${encodeURIComponent(message)}`;
@@ -93,46 +164,116 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Quick Contact Options */}
-          <div className="space-y-4">
-            <div className="bg-secondary p-8 rounded-sm border-2 border-accent">
-              <h3 className="text-2xl font-bold text-white mb-6">Contacta con nosotros</h3>
+          {/* Contact Form */}
+          <div>
+            <form onSubmit={handleSubmit} className="space-y-4 bg-secondary p-8 rounded-sm border-2 border-accent">
+              <h3 className="text-xl font-bold text-white mb-6">Solicita tu Servicio</h3>
               
-              {/* WhatsApp Button */}
-              <button
-                onClick={handleWhatsAppClick}
-                className="w-full flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-sm transition-colors duration-200 mb-4"
+              <div>
+                <label className="block text-sm font-semibold text-white mb-2">Nombre *</label>
+                <input
+                  type="text"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
+                  placeholder="Tu nombre completo"
+                  required
+                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-white mb-2">Correo *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="tu@email.com"
+                  required
+                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-white mb-2">Teléfono *</label>
+                <input
+                  type="tel"
+                  name="telefono"
+                  value={formData.telefono}
+                  onChange={handleChange}
+                  placeholder="+57 (2) XXXX-XXXX"
+                  required
+                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-white mb-2">Vehículo *</label>
+                <input
+                  type="text"
+                  name="vehiculo"
+                  value={formData.vehiculo}
+                  onChange={handleChange}
+                  placeholder="Marca y modelo"
+                  required
+                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-white mb-2">Servicio Requerido *</label>
+                <textarea
+                  name="servicio"
+                  value={formData.servicio}
+                  onChange={handleChange}
+                  placeholder="Describe el servicio que necesitas"
+                  rows={3}
+                  required
+                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="btn-industrial w-full disabled:opacity-50 disabled:cursor-not-allowed transition-all"
               >
-                <MessageCircle size={20} />
-                Enviar por WhatsApp
+                {isSubmitting ? 'Enviando...' : 'Enviar Solicitud'}
               </button>
 
-              {/* Email Button */}
-              <button
-                onClick={handleEmailClick}
-                className="w-full flex items-center justify-center gap-3 btn-industrial py-3 px-6 mb-4"
-              >
-                <Mail size={20} />
-                Enviar por Correo
-              </button>
-
-              {/* Phone Button */}
-              <a
-                href="tel:+573173739444"
-                className="w-full flex items-center justify-center gap-3 border-2 border-accent text-accent hover:bg-accent hover:text-background font-bold py-3 px-6 rounded-sm transition-colors duration-200"
-              >
-                <Phone size={20} />
-                Llamar Ahora
-              </a>
-            </div>
-
-            {/* Info Box */}
-            <div className="bg-secondary p-6 rounded-sm border-2 border-accent">
-              <p className="text-gray-300 text-sm leading-relaxed">
-                <span className="text-accent font-bold">Respuesta rápida:</span> Nos comunicaremos contigo en el menor tiempo posible. Puedes contactarnos por WhatsApp, correo o teléfono.
+              <p className="text-xs text-gray-400 text-center">
+                Nos contactaremos en el menor tiempo posible
               </p>
-            </div>
+            </form>
           </div>
+        </div>
+
+        {/* Quick Contact Buttons */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <button
+            onClick={handleWhatsAppClick}
+            className="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-sm transition-colors duration-200"
+          >
+            <MessageCircle size={20} />
+            Contactar por WhatsApp
+          </button>
+
+          <a
+            href="tel:+573173739444"
+            className="flex items-center justify-center gap-3 btn-industrial py-4 px-6 transition-colors duration-200"
+          >
+            <Phone size={20} />
+            Llamar Ahora
+          </a>
+
+          <button
+            onClick={handleEmailClick}
+            className="flex items-center justify-center gap-3 border-2 border-accent text-accent hover:bg-accent hover:text-background font-bold py-4 px-6 rounded-sm transition-colors duration-200"
+          >
+            <Mail size={20} />
+            Enviar Correo
+          </button>
         </div>
       </div>
     </section>
