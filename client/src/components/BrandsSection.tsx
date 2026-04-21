@@ -1,31 +1,31 @@
 const oilBrands = [
-  'ELF',
-  'Mobil',
-  'Motul',
-  'Hyundai',
-  'Pure Guard',
-  'Chevron',
-  'Havoline',
-  'Mazda',
-  'Total Energies',
-  'Petronas',
-  'Motorcraft',
-  'Kixx',
+  { name: 'ELF', logo: '' },
+  { name: 'Mobil', logo: '' },
+  { name: 'Motul', logo: '' },
+  { name: 'Hyundai', logo: '' },
+  { name: 'Pure Guard', logo: '' },
+  { name: 'Chevron', logo: '' },
+  { name: 'Havoline', logo: '' },
+  { name: 'Mazda', logo: '' },
+  { name: 'Total Energies', logo: '' },
+  { name: 'Petronas', logo: '' },
+  { name: 'Motorcraft', logo: '' },
+  { name: 'Kixx', logo: '' },
 ];
 
 const carBrands = [
-  'Renault',
-  'Chevrolet',
-  'Kia',
-  'Mazda',
-  'Toyota',
-  'Hyundai',
-  'Nissan',
-  'Ford',
-  'Volkswagen',
-  'BMW',
-  'Mercedes-Benz',
-  'Audi',
+  { name: 'Renault', logo: '' },
+  { name: 'Chevrolet', logo: '' },
+  { name: 'Kia', logo: '' },
+  { name: 'Mazda', logo: '' },
+  { name: 'Toyota', logo: '' },
+  { name: 'Hyundai', logo: '' },
+  { name: 'Nissan', logo: '' },
+  { name: 'Ford', logo: '' },
+  { name: 'Volkswagen', logo: '' },
+  { name: 'BMW', logo: '' },
+  { name: 'Mercedes-Benz', logo: '' },
+  { name: 'Audi', logo: '' },
 ];
 
 export default function BrandsSection() {
@@ -47,12 +47,20 @@ export default function BrandsSection() {
                 key={index}
                 className="bg-background border border-border rounded-sm p-4 text-center hover:border-accent hover:shadow-lg transition-all duration-300 group"
               >
-                {/* Logo Placeholder */}
-                <div className="h-16 bg-gray-800 border-2 border-dashed border-gray-600 rounded-sm mb-3 flex items-center justify-center">
-                  <span className="text-gray-500 text-xs">Logo aquí</span>
+                {/* Logo Placeholder - Pega aquí tu URL de logo */}
+                <div className="h-16 bg-gray-800 border-2 border-dashed border-gray-600 rounded-sm mb-3 flex items-center justify-center overflow-hidden">
+                  {brand.logo ? (
+                    <img 
+                      src={brand.logo} 
+                      alt={brand.name}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  ) : (
+                    <span className="text-gray-500 text-xs text-center px-2">Pega URL aquí</span>
+                  )}
                 </div>
                 <p className="text-white font-semibold group-hover:text-accent transition-colors">
-                  {brand}
+                  {brand.name}
                 </p>
               </div>
             ))}
@@ -77,12 +85,20 @@ export default function BrandsSection() {
                 key={index}
                 className="bg-background border border-border rounded-sm p-4 text-center hover:border-accent hover:shadow-lg transition-all duration-300 group"
               >
-                {/* Logo Placeholder */}
-                <div className="h-16 bg-gray-800 border-2 border-dashed border-gray-600 rounded-sm mb-3 flex items-center justify-center">
-                  <span className="text-gray-500 text-xs">Logo aquí</span>
+                {/* Logo Placeholder - Pega aquí tu URL de logo */}
+                <div className="h-16 bg-gray-800 border-2 border-dashed border-gray-600 rounded-sm mb-3 flex items-center justify-center overflow-hidden">
+                  {brand.logo ? (
+                    <img 
+                      src={brand.logo} 
+                      alt={brand.name}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  ) : (
+                    <span className="text-gray-500 text-xs text-center px-2">Pega URL aquí</span>
+                  )}
                 </div>
                 <p className="text-white font-semibold group-hover:text-accent transition-colors">
-                  {brand}
+                  {brand.name}
                 </p>
               </div>
             ))}
