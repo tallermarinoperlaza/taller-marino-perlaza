@@ -6,6 +6,7 @@ import FeaturesSection from '@/components/FeaturesSection';
 import BrandsSection from '@/components/BrandsSection';
 import GallerySection from '@/components/GallerySection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import PromotionsSection from '@/components/PromotionsSection';
 import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
@@ -33,6 +34,7 @@ export default function Home() {
         <BrandsSection />
         <GallerySection />
         <TestimonialsSection />
+        <PromotionsSection />
         <FAQSection />
         <ContactSection />
       </main>

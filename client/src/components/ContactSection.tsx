@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import { toast } from 'sonner';
@@ -25,61 +23,53 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validar campos
+    if (!formData.nombre || !formData.email || !formData.telefono) {
+      toast.error('Por favor completa los campos requeridos.', { duration: 3000 });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // Enviar al backend de Manus
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          nombre: formData.nombre,
-          email: formData.email,
-          telefono: formData.telefono,
-          vehiculo: formData.vehiculo,
-          servicio: formData.servicio,
-          timestamp: new Date().toISOString()
-        })
-      });
+      // Crear mensaje para WhatsApp
+      const mensaje = `Hola Taller Marino Perlaza, soy ${formData.nombre}. Mi teléfono es ${formData.telefono}, mi correo es ${formData.email}. Tengo un ${formData.vehiculo || 'vehículo'}. Necesito: ${formData.servicio || 'información sobre servicios'}`;
+      
+      // Abrir WhatsApp con el mensaje
+      const whatsappUrl = `https://wa.me/573173739444?text=${encodeURIComponent(mensaje)}`;
+      window.open(whatsappUrl, '_blank');
 
-      if (response.ok) {
-        toast.success('¡Solicitud enviada exitosamente! Nos contactaremos pronto.', {
-          duration: 4000,
-        });
-        
-        // Limpiar formulario
-        setFormData({
-          nombre: '',
-          email: '',
-          telefono: '',
-          vehiculo: '',
-          servicio: ''
-        });
-      } else {
-        toast.error('Error al enviar la solicitud. Intenta nuevamente.', {
-          duration: 4000,
-        });
-      }
+      toast.success('¡Abriendo WhatsApp! Envía tu mensaje para contactarnos.', {
+        duration: 3000,
+      });
+      
+      // Limpiar formulario
+      setFormData({
+        nombre: '',
+        email: '',
+        telefono: '',
+        vehiculo: '',
+        servicio: ''
+      });
     } catch (error) {
       console.error('Error:', error);
-      toast.error('Error de conexión. Por favor intenta de nuevo.', {
-        duration: 4000,
+      toast.error('Error al procesar la solicitud.', {
+        duration: 3000,
       });
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:tallermarinoperlaza@gmail.com';
+  };
+
   const handleWhatsAppClick = () => {
     const message = "Hola Taller Marino Perlaza, me gustaría solicitar información sobre sus servicios.";
     const whatsappUrl = `https://wa.me/573173739444?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-  };
-
-  const handleEmailClick = () => {
-    window.location.href = "mailto:tallermarinoperlaza@gmail.com?subject=Solicitud%20de%20Servicio";
   };
 
   return (
@@ -92,15 +82,15 @@ export default function ContactSection() {
             <span className="text-accent font-mono text-sm font-semibold">Contacto</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Encuéntranos en la Carrera 15
+            Ponte en contacto con nosotros
           </h2>
           <p className="text-lg text-gray-400">
-            Estamos en San Bosco, listos para atender tus necesidades automotrices. Llámanos o visítanos cuando lo necesites.
+            Estamos listos para ayudarte. Contáctanos por WhatsApp, teléfono, correo o completa el formulario para que nos comuniquemos contigo.
           </p>
         </div>
 
         {/* Contact Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Contact Information */}
           <div className="space-y-6">
             {/* Location */}
@@ -156,95 +146,103 @@ export default function ContactSection() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-white mb-2">Horarios</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Horario</h3>
                 <p className="text-gray-400">
-                  Lunes - Sábado: 7:00 AM - 6:00 PM
+                  Lunes a Sábado: 7:00 AM - 6:00 PM
                 </p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-4 bg-secondary p-8 rounded-sm border-2 border-accent">
-              <h3 className="text-xl font-bold text-white mb-6">Solicita tu Servicio</h3>
-              
+          <div className="bg-secondary p-8 rounded-sm border-2 border-accent">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Nombre */}
               <div>
-                <label className="block text-sm font-semibold text-white mb-2">Nombre *</label>
+                <label className="block text-sm font-semibold text-white mb-2">
+                  Nombre *
+                </label>
                 <input
                   type="text"
                   name="nombre"
                   value={formData.nombre}
                   onChange={handleChange}
-                  placeholder="Tu nombre completo"
+                  placeholder="Tu nombre"
+                  className="w-full px-4 py-2 bg-background text-white border-2 border-accent rounded-sm focus:outline-none focus:border-orange-500 transition-colors"
                   required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
 
+              {/* Email */}
               <div>
-                <label className="block text-sm font-semibold text-white mb-2">Correo *</label>
+                <label className="block text-sm font-semibold text-white mb-2">
+                  Correo *
+                </label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="tu@email.com"
+                  placeholder="tu@correo.com"
+                  className="w-full px-4 py-2 bg-background text-white border-2 border-accent rounded-sm focus:outline-none focus:border-orange-500 transition-colors"
                   required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
 
+              {/* Teléfono */}
               <div>
-                <label className="block text-sm font-semibold text-white mb-2">Teléfono *</label>
+                <label className="block text-sm font-semibold text-white mb-2">
+                  Teléfono *
+                </label>
                 <input
                   type="tel"
                   name="telefono"
                   value={formData.telefono}
                   onChange={handleChange}
-                  placeholder="+57 (2) XXXX-XXXX"
+                  placeholder="3173739444"
+                  className="w-full px-4 py-2 bg-background text-white border-2 border-accent rounded-sm focus:outline-none focus:border-orange-500 transition-colors"
                   required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
 
+              {/* Vehículo */}
               <div>
-                <label className="block text-sm font-semibold text-white mb-2">Vehículo *</label>
+                <label className="block text-sm font-semibold text-white mb-2">
+                  Vehículo
+                </label>
                 <input
                   type="text"
                   name="vehiculo"
                   value={formData.vehiculo}
                   onChange={handleChange}
-                  placeholder="Marca y modelo"
-                  required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
+                  placeholder="Ej: Toyota Corolla 2018"
+                  className="w-full px-4 py-2 bg-background text-white border-2 border-accent rounded-sm focus:outline-none focus:border-orange-500 transition-colors"
                 />
               </div>
 
+              {/* Servicio */}
               <div>
-                <label className="block text-sm font-semibold text-white mb-2">Servicio Requerido *</label>
+                <label className="block text-sm font-semibold text-white mb-2">
+                  Servicio Requerido
+                </label>
                 <textarea
                   name="servicio"
                   value={formData.servicio}
                   onChange={handleChange}
-                  placeholder="Describe el servicio que necesitas"
+                  placeholder="Describe el servicio que necesitas..."
                   rows={3}
-                  required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors resize-none"
-                ></textarea>
+                  className="w-full px-4 py-2 bg-background text-white border-2 border-accent rounded-sm focus:outline-none focus:border-orange-500 transition-colors resize-none"
+                />
               </div>
 
-              <button 
-                type="submit" 
+              {/* Submit Button */}
+              <button
+                type="submit"
                 disabled={isSubmitting}
-                className="btn-industrial w-full disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                className="w-full bg-accent hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-sm transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Enviando...' : 'Enviar Solicitud'}
+                {isSubmitting ? 'Enviando...' : 'Enviar Solicitud por WhatsApp'}
               </button>
-
-              <p className="text-xs text-gray-400 text-center">
-                Nos contactaremos en el menor tiempo posible
-              </p>
             </form>
           </div>
         </div>
@@ -295,13 +293,13 @@ export default function ContactSection() {
             Llamar Ahora
           </a>
 
-          <button
-            onClick={handleEmailClick}
-            className="flex items-center justify-center gap-3 border-2 border-accent text-accent hover:bg-accent hover:text-background font-bold py-4 px-6 rounded-sm transition-colors duration-200"
+          <a
+            href="mailto:tallermarinoperlaza@gmail.com"
+            className="flex items-center justify-center gap-3 btn-industrial py-4 px-6 transition-colors duration-200"
           >
             <Mail size={20} />
             Enviar Correo
-          </button>
+          </a>
         </div>
       </div>
     </section>
