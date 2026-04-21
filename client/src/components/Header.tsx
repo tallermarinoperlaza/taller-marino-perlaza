@@ -62,9 +62,12 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className="btn-industrial">
+          <a
+            href="mailto:tallermarinoperlaza@gmail.com?subject=Solicitud%20de%20Servicio&body=Hola%20Taller%20Marino%20Perlaza,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios."
+            className="btn-industrial inline-block"
+          >
             Solicitar Servicio
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
