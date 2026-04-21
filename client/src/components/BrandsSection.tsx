@@ -1,5 +1,5 @@
 const oilBrands = [
-  { name: 'ELF', logo: '' },
+  { name: 'ELF', logo: 'https://worldvectorlogo.com/es/logo/elf-2' },
   { name: 'Mobil', logo: '' },
   { name: 'Motul', logo: '' },
   { name: 'Hyundai', logo: '' },
