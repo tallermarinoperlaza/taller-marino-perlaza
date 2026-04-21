@@ -1,69 +1,14 @@
-'use client';
-
-import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    nombre: '',
-    email: '',
-    telefono: '',
-    vehiculo: '',
-    servicio: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const handleWhatsAppClick = () => {
+    const message = "Hola Taller Marino Perlaza, me gustaría solicitar información sobre sus servicios.";
+    const whatsappUrl = `https://wa.me/573173739444?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Crear el cuerpo del correo con los datos del formulario
-    const emailBody = `
-Solicitud de Servicio - Taller Marino Perlaza
-
-Datos del Cliente:
-- Nombre: ${formData.nombre}
-- Email: ${formData.email}
-- Teléfono: ${formData.telefono}
-- Vehículo: ${formData.vehiculo}
-
-Servicio Requerido:
-${formData.servicio}
-
----
-Este correo fue enviado desde el sitio web de Taller Marino Perlaza
-    `.trim();
-
-    // Usar mailto para enviar el correo
-    const mailtoLink = `mailto:tallermarinoperlaza@gmail.com?subject=Nueva%20Solicitud%20de%20Servicio%20-%20${encodeURIComponent(formData.nombre)}&body=${encodeURIComponent(emailBody)}`;
-    
-    window.location.href = mailtoLink;
-
-    // Mostrar mensaje de éxito
-    setSubmitMessage('¡Gracias! Se abrirá tu cliente de correo para enviar la solicitud.');
-    
-    // Limpiar formulario después de 2 segundos
-    setTimeout(() => {
-      setFormData({
-        nombre: '',
-        email: '',
-        telefono: '',
-        vehiculo: '',
-        servicio: ''
-      });
-      setSubmitMessage('');
-      setIsSubmitting(false);
-    }, 2000);
+  const handleEmailClick = () => {
+    window.location.href = "mailto:tallermarinoperlaza@gmail.com?subject=Solicitud%20de%20Servicio";
   };
 
   return (
@@ -103,7 +48,7 @@ Este correo fue enviado desde el sitio web de Taller Marino Perlaza
             </div>
 
             {/* Phone */}
-            <div className="flex gap-4 group">
+            <div className="flex gap-4 group cursor-pointer" onClick={() => window.location.href = 'tel:+573173739444'}>
               <div className="flex-shrink-0">
                 <div className="flex items-center justify-center w-12 h-12 bg-secondary rounded-sm group-hover:bg-accent transition-colors duration-300">
                   <Phone size={24} className="text-accent group-hover:text-white transition-colors" />
@@ -111,14 +56,14 @@ Este correo fue enviado desde el sitio web de Taller Marino Perlaza
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">Teléfono</h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-accent transition-colors">
                   3173739444 - 3146433367
                 </p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex gap-4 group">
+            <div className="flex gap-4 group cursor-pointer" onClick={handleEmailClick}>
               <div className="flex-shrink-0">
                 <div className="flex items-center justify-center w-12 h-12 bg-secondary rounded-sm group-hover:bg-accent transition-colors duration-300">
                   <Mail size={24} className="text-accent group-hover:text-white transition-colors" />
@@ -126,7 +71,7 @@ Este correo fue enviado desde el sitio web de Taller Marino Perlaza
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">Correo</h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-accent transition-colors">
                   tallermarinoperlaza@gmail.com
                 </p>
               </div>
@@ -148,82 +93,45 @@ Este correo fue enviado desde el sitio web de Taller Marino Perlaza
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-4 bg-secondary p-8 rounded-sm border-2 border-accent">
-              <div>
-                <label className="block text-sm font-semibold text-white mb-2">Nombre</label>
-                <input
-                  type="text"
-                  name="nombre"
-                  value={formData.nombre}
-                  onChange={handleChange}
-                  placeholder="Tu nombre completo"
-                  required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-white mb-2">Correo</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="tu@email.com"
-                  required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-white mb-2">Teléfono</label>
-                <input
-                  type="tel"
-                  name="telefono"
-                  value={formData.telefono}
-                  onChange={handleChange}
-                  placeholder="+57 (2) XXXX-XXXX"
-                  required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-white mb-2">Vehículo</label>
-                <input
-                  type="text"
-                  name="vehiculo"
-                  value={formData.vehiculo}
-                  onChange={handleChange}
-                  placeholder="Marca y modelo"
-                  required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-white mb-2">Servicio Requerido</label>
-                <textarea
-                  name="servicio"
-                  value={formData.servicio}
-                  onChange={handleChange}
-                  placeholder="Describe el servicio que necesitas"
-                  rows={3}
-                  required
-                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors resize-none"
-                ></textarea>
-              </div>
-              <button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="btn-industrial w-full disabled:opacity-50 disabled:cursor-not-allowed"
+          {/* Quick Contact Options */}
+          <div className="space-y-4">
+            <div className="bg-secondary p-8 rounded-sm border-2 border-accent">
+              <h3 className="text-2xl font-bold text-white mb-6">Contacta con nosotros</h3>
+              
+              {/* WhatsApp Button */}
+              <button
+                onClick={handleWhatsAppClick}
+                className="w-full flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-sm transition-colors duration-200 mb-4"
               >
-                {isSubmitting ? 'Enviando...' : 'Enviar Solicitud'}
+                <MessageCircle size={20} />
+                Enviar por WhatsApp
               </button>
-              {submitMessage && (
-                <p className="text-accent text-sm text-center font-semibold">
-                  {submitMessage}
-                </p>
-              )}
-            </form>
+
+              {/* Email Button */}
+              <button
+                onClick={handleEmailClick}
+                className="w-full flex items-center justify-center gap-3 btn-industrial py-3 px-6 mb-4"
+              >
+                <Mail size={20} />
+                Enviar por Correo
+              </button>
+
+              {/* Phone Button */}
+              <a
+                href="tel:+573173739444"
+                className="w-full flex items-center justify-center gap-3 border-2 border-accent text-accent hover:bg-accent hover:text-background font-bold py-3 px-6 rounded-sm transition-colors duration-200"
+              >
+                <Phone size={20} />
+                Llamar Ahora
+              </a>
+            </div>
+
+            {/* Info Box */}
+            <div className="bg-secondary p-6 rounded-sm border-2 border-accent">
+              <p className="text-gray-300 text-sm leading-relaxed">
+                <span className="text-accent font-bold">Respuesta rápida:</span> Nos comunicaremos contigo en el menor tiempo posible. Puedes contactarnos por WhatsApp, correo o teléfono.
+              </p>
+            </div>
           </div>
         </div>
       </div>
