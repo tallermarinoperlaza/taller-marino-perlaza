@@ -1,6 +1,71 @@
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
+'use client';
+
+import { useState } from 'react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    nombre: '',
+    email: '',
+    telefono: '',
+    vehiculo: '',
+    servicio: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Crear el cuerpo del correo con los datos del formulario
+    const emailBody = `
+Solicitud de Servicio - Taller Marino Perlaza
+
+Datos del Cliente:
+- Nombre: ${formData.nombre}
+- Email: ${formData.email}
+- Teléfono: ${formData.telefono}
+- Vehículo: ${formData.vehiculo}
+
+Servicio Requerido:
+${formData.servicio}
+
+---
+Este correo fue enviado desde el sitio web de Taller Marino Perlaza
+    `.trim();
+
+    // Usar mailto para enviar el correo
+    const mailtoLink = `mailto:tallermarinoperlaza@gmail.com?subject=Nueva%20Solicitud%20de%20Servicio%20-%20${encodeURIComponent(formData.nombre)}&body=${encodeURIComponent(emailBody)}`;
+    
+    window.location.href = mailtoLink;
+
+    // Mostrar mensaje de éxito
+    setSubmitMessage('¡Gracias! Se abrirá tu cliente de correo para enviar la solicitud.');
+    
+    // Limpiar formulario después de 2 segundos
+    setTimeout(() => {
+      setFormData({
+        nombre: '',
+        email: '',
+        telefono: '',
+        vehiculo: '',
+        servicio: ''
+      });
+      setSubmitMessage('');
+      setIsSubmitting(false);
+    }, 2000);
+  };
+
   return (
     <section id="contacto" className="bg-background py-20 border-t-2 border-accent">
       <div className="container">
@@ -77,23 +142,36 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">Horarios</h3>
                 <p className="text-gray-400">
-                  Lunes - Viernes: 7:00 AM - 6:00 PM<br />
-                  Sábado: 8:00 AM - 4:00 PM<br />
-                  Domingo: Cerrado
+                  Lunes - Sábado: 7:00 AM - 6:00 PM
                 </p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-secondary border border-border rounded-sm p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">Solicita un Servicio</h3>
-            <form className="space-y-4">
+          <div>
+            <form onSubmit={handleSubmit} className="space-y-4 bg-secondary p-8 rounded-sm border-2 border-accent">
               <div>
                 <label className="block text-sm font-semibold text-white mb-2">Nombre</label>
                 <input
                   type="text"
-                  placeholder="Tu nombre"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
+                  placeholder="Tu nombre completo"
+                  required
+                  className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-white mb-2">Correo</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="tu@email.com"
+                  required
                   className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
@@ -101,7 +179,11 @@ export default function ContactSection() {
                 <label className="block text-sm font-semibold text-white mb-2">Teléfono</label>
                 <input
                   type="tel"
+                  name="telefono"
+                  value={formData.telefono}
+                  onChange={handleChange}
                   placeholder="+57 (2) XXXX-XXXX"
+                  required
                   className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
@@ -109,21 +191,38 @@ export default function ContactSection() {
                 <label className="block text-sm font-semibold text-white mb-2">Vehículo</label>
                 <input
                   type="text"
+                  name="vehiculo"
+                  value={formData.vehiculo}
+                  onChange={handleChange}
                   placeholder="Marca y modelo"
+                  required
                   className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-white mb-2">Servicio Requerido</label>
                 <textarea
+                  name="servicio"
+                  value={formData.servicio}
+                  onChange={handleChange}
                   placeholder="Describe el servicio que necesitas"
                   rows={3}
+                  required
                   className="w-full bg-background border border-border rounded-sm px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors resize-none"
                 ></textarea>
               </div>
-              <button type="submit" className="btn-industrial w-full">
-                Enviar Solicitud
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="btn-industrial w-full disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Enviando...' : 'Enviar Solicitud'}
               </button>
+              {submitMessage && (
+                <p className="text-accent text-sm text-center font-semibold">
+                  {submitMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>
