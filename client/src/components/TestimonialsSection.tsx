@@ -23,7 +23,7 @@ export default function TestimonialsSection() {
       nombre: "Juan Rodríguez",
       vehiculo: "Mazda 3 2019",
       calificacion: 5,
-      texto: "Después de 18 años en el negocio, se nota la experiencia. Hicieron un trabajo impecable en la sincronización de mi motor. Precio justo y garantía en los productos. ¡Recomendado!",
+      texto: "Se nota la experiencia de Don Marino y su equipo. Hicieron un trabajo impecable en la sincronización de mi motor. Precio justo y garantía en los productos. ¡Recomendado!",
       iniciales: "JR"
     }
   ];
@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
             Lo que dicen nuestros clientes
           </h2>
           <p className="text-lg text-gray-400">
-            Más de 18 años ganando la confianza de cientos de clientes satisfechos con nuestro servicio técnico especializado.
+            Trabajo de calidad, ganando la confianza de cientos de clientes satisfechos con nuestro servicio técnico especializado.
           </p>
         </div>
 

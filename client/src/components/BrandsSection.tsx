@@ -1,31 +1,31 @@
 const oilBrands = [
-  'ELF',
-  'Mobil',
-  'Motul',
-  'Hyundai',
-  'Pure Guard',
-  'Chevron',
-  'Havoline',
-  'Mazda',
-  'Total Energies',
-  'Petronas',
-  'Motorcraft',
-  'Kixx',
+  { name: 'ELF', logo: '🛢️' },
+  { name: 'Mobil', logo: '🔴' },
+  { name: 'Motul', logo: '🟡' },
+  { name: 'Hyundai', logo: '🏷️' },
+  { name: 'Pure Guard', logo: '🛡️' },
+  { name: 'Chevron', logo: '⬆️' },
+  { name: 'Havoline', logo: '🌊' },
+  { name: 'Mazda', logo: '🔷' },
+  { name: 'Total Energies', logo: '⚡' },
+  { name: 'Petronas', logo: '🌟' },
+  { name: 'Motorcraft', logo: '🔧' },
+  { name: 'Kixx', logo: '🏆' },
 ];
 
 const carBrands = [
-  'Renault',
-  'Chevrolet',
-  'Kia',
-  'Mazda',
-  'Toyota',
-  'Hyundai',
-  'Nissan',
-  'Ford',
-  'Volkswagen',
-  'BMW',
-  'Mercedes-Benz',
-  'Audi',
+  { name: 'Renault', logo: '🔷' },
+  { name: 'Chevrolet', logo: '⬜' },
+  { name: 'Kia', logo: '🔶' },
+  { name: 'Mazda', logo: '🔷' },
+  { name: 'Toyota', logo: '🔴' },
+  { name: 'Hyundai', logo: '🔵' },
+  { name: 'Nissan', logo: '🔴' },
+  { name: 'Ford', logo: '🔵' },
+  { name: 'Volkswagen', logo: '🔴' },
+  { name: 'BMW', logo: '⚪' },
+  { name: 'Mercedes-Benz', logo: '⭐' },
+  { name: 'Audi', logo: '🔴' },
 ];
 
 export default function BrandsSection() {
@@ -45,10 +45,13 @@ export default function BrandsSection() {
             {oilBrands.map((brand, index) => (
               <div
                 key={index}
-                className="bg-background border border-border rounded-sm p-4 text-center hover:border-accent hover:shadow-lg transition-all duration-300 group"
+                className="bg-background border border-border rounded-sm p-6 text-center hover:border-accent hover:shadow-lg transition-all duration-300 group flex flex-col items-center justify-center gap-3"
               >
-                <p className="text-white font-semibold group-hover:text-accent transition-colors">
-                  {brand}
+                <div className="text-4xl">
+                  {brand.logo}
+                </div>
+                <p className="text-white font-semibold text-sm group-hover:text-accent transition-colors">
+                  {brand.name}
                 </p>
               </div>
             ))}
@@ -71,10 +74,13 @@ export default function BrandsSection() {
             {carBrands.map((brand, index) => (
               <div
                 key={index}
-                className="bg-background border border-border rounded-sm p-4 text-center hover:border-accent hover:shadow-lg transition-all duration-300 group"
+                className="bg-background border border-border rounded-sm p-6 text-center hover:border-accent hover:shadow-lg transition-all duration-300 group flex flex-col items-center justify-center gap-3"
               >
-                <p className="text-white font-semibold group-hover:text-accent transition-colors">
-                  {brand}
+                <div className="text-4xl">
+                  {brand.logo}
+                </div>
+                <p className="text-white font-semibold text-sm group-hover:text-accent transition-colors">
+                  {brand.name}
                 </p>
               </div>
             ))}
