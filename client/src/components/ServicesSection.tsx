@@ -22,7 +22,7 @@ const services = [
   {
     icon: Zap,
     title: 'Reparación de Motores',
-    description: 'Reparamos motores a gasolina y diésel con experiencia de 18 años. Sincronización, revisión interna y restauración completa para que tu motor vuelva a funcionar como nuevo.',
+    description: 'Reparamos motores a gasolina y diésel. Sincronización, revisión interna y restauración completa para que tu motor vuelva a funcionar como nuevo.',
     color: 'text-red-500',
   },
   {

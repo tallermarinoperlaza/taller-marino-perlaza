@@ -20,11 +20,11 @@ export default function AboutSection() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              18 años de experiencia en la Carrera 15
+              Con experiencia en la Cra 15...
             </h2>
 
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Desde hace 18 años, Taller Marino Perlaza ha sido el aliado de confianza de cientos de clientes en Cali. Comenzamos con una visión clara: ofrecer servicios automotrices de calidad con honestidad y profesionalismo.
+              Aquí en Taller Marino Perlaza hemos sido el aliado de confianza de cientos de clientes en Cali. Comenzamos con una visión clara: ofrecer servicios automotrices de calidad con honestidad y profesionalismo.
             </p>
 
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
