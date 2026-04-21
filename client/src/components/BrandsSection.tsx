@@ -3,14 +3,14 @@ const oilBrands = [
   { name: 'Mobil', logo: '/manus-storage/mobil_db37e24a.png' },
   { name: 'Motul', logo: '/manus-storage/motul_6ed611dc.png' },
   { name: 'Hyundai', logo: '/manus-storage/hyundai_3de9d458.png' },
-  { name: 'Pure Guard', logo: '' },
-  { name: 'Chevron', logo: '' },
-  { name: 'Havoline', logo: '' },
-  { name: 'Mazda', logo: '' },
-  { name: 'Total Energies', logo: '' },
-  { name: 'Petronas', logo: '' },
-  { name: 'Motorcraft', logo: '' },
-  { name: 'Kixx', logo: '' },
+  { name: 'Pure Guard', logo: 'https://www.pureguard.com/wp-content/uploads/2020/08/PG-GnYel-2014-Logo-Tagline.png' },
+  { name: 'Chevron', logo: 'https://static.vecteezy.com/system/resources/previews/073/495/042/non_2x/chevron-logo-rounded-glossy-icon-with-transparent-background-free-png.png' },
+  { name: 'Havoline', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Havoline_brand_logo.png' },
+  { name: 'Mazda', logo: 'https://dxm.content-center.totalenergies.com/api/wedia/dam/transform/xysh7dg731tah95xpg8jfzbb8e/logo-mazda-totalenergies-jpg.webp?t=resize&width=490&height=342' },
+  { name: 'Total Energies', logo: 'https://cdn.worldvectorlogo.com/logos/total-energies-2025-logo.svg' },
+  { name: 'Petronas', logo: 'https://static.vecteezy.com/system/resources/thumbnails/068/842/094/small/petronas-logo-oil-and-gas-company-icon-emblem-transparent-background-free-png.png' },
+  { name: 'Motorcraft', logo: 'https://w7.pngwing.com/pngs/1017/507/png-transparent-ford-motor-company-motorcraft-brand-logo-mercury-others-text-label-service.png' },
+  { name: 'Kixx', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnCQ3fdCGIAe0quWRbkfKOGOv_QATJ-BO6fw&s' },
 ];
 
 const carBrands = [
