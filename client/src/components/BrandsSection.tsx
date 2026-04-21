@@ -8,7 +8,7 @@ const oilBrands = [
   { name: 'Havoline', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Havoline_brand_logo.png' },
   { name: 'Mazda', logo: 'https://dxm.content-center.totalenergies.com/api/wedia/dam/transform/xysh7dg731tah95xpg8jfzbb8e/logo-mazda-totalenergies-jpg.webp?t=resize&width=490&height=342' },
   { name: 'Total Energies', logo: 'https://cdn.worldvectorlogo.com/logos/total-energies-2025-logo.svg' },
-  { name: 'Petronas', logo: 'https://static.vecteezy.com/system/resources/thumbnails/068/842/094/small/petronas-logo-oil-and-gas-company-icon-emblem-transparent-background-free-png.png' },
+  { name: 'Petronas', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDxiiX1WK2jOPoQzSlkAkrCZt4NNoNpyngwQ&s' },
   { name: 'Motorcraft', logo: 'https://w7.pngwing.com/pngs/1017/507/png-transparent-ford-motor-company-motorcraft-brand-logo-mercury-others-text-label-service.png' },
   { name: 'Kixx', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnCQ3fdCGIAe0quWRbkfKOGOv_QATJ-BO6fw&s' },
 ];
@@ -45,15 +45,15 @@ export default function BrandsSection() {
             {oilBrands.map((brand, index) => (
               <div
                 key={index}
-                className="bg-background border border-border rounded-sm p-4 text-center hover:border-accent hover:shadow-lg transition-all duration-300 group"
+                className="text-center hover:scale-110 transition-transform duration-300 group"
               >
                 {/* Logo Container */}
-                <div className="h-16 bg-gray-800 border border-gray-600 rounded-sm mb-3 flex items-center justify-center overflow-hidden">
+                <div className="h-20 flex items-center justify-center overflow-hidden mb-3">
                   {brand.logo ? (
                     <img 
                       src={brand.logo} 
                       alt={brand.name}
-                      className="max-h-full max-w-full object-contain p-2"
+                      className="max-h-full max-w-full object-contain"
                     />
                   ) : (
                     <span className="text-gray-500 text-xs text-center px-2">Logo</span>
@@ -83,15 +83,15 @@ export default function BrandsSection() {
             {carBrands.map((brand, index) => (
               <div
                 key={index}
-                className="bg-background border border-border rounded-sm p-4 text-center hover:border-accent hover:shadow-lg transition-all duration-300 group"
+                className="text-center hover:scale-110 transition-transform duration-300 group"
               >
                 {/* Logo Container */}
-                <div className="h-16 bg-gray-800 border border-gray-600 rounded-sm mb-3 flex items-center justify-center overflow-hidden">
+                <div className="h-20 flex items-center justify-center overflow-hidden mb-3">
                   {brand.logo ? (
                     <img 
                       src={brand.logo} 
                       alt={brand.name}
-                      className="max-h-full max-w-full object-contain p-2"
+                      className="max-h-full max-w-full object-contain"
                     />
                   ) : (
                     <span className="text-gray-500 text-xs text-center px-2">Logo</span>
