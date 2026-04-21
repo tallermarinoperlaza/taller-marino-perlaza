@@ -27,8 +27,8 @@ const services = [
   },
   {
     icon: Paintbrush,
-    title: 'Pintura y Lámina',
-    description: 'Pintura profesional y reparación de lámina. Restauramos tu vehículo a su condición original con acabado de calidad.',
+    title: 'Lámina y Pintura',
+    description: 'Reparación de lámina y pintura profesional. Restauramos tu vehículo a su condición original con acabado de calidad.',
     color: 'text-orange-500',
   },
   {
