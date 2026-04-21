@@ -249,6 +249,20 @@ export default function ContactSection() {
           </div>
         </div>
 
+        {/* Google Maps */}
+        <div className="mt-16 rounded-sm overflow-hidden border-2 border-accent h-96">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.7632384234567!2d-76.5!3d3.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f5c1c1c1c1%3A0x1c1c1c1c1c1c1c1c!2sTaller%20Marino%20Perlaza!5e0!3m2!1ses!2sco!4v1234567890"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full"
+          ></iframe>
+        </div>
+
         {/* Quick Contact Buttons */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
           <button
