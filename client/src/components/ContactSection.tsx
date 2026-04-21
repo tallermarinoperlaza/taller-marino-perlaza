@@ -250,16 +250,30 @@ export default function ContactSection() {
         </div>
 
         {/* Google Maps */}
-        <div className="mt-16 rounded-sm overflow-hidden border-2 border-accent h-96">
+        <div className="mt-16 rounded-sm overflow-hidden border-2 border-accent">
+          <div className="flex flex-col gap-4 p-6 bg-secondary">
+            <h3 className="text-2xl font-bold text-white mb-2">Ubicación</h3>
+            <p className="text-gray-400 mb-4">
+              Cra 15 # 6-134 San Bosco, Cali, Valle del Cauca, Colombia
+            </p>
+            <a
+              href="https://maps.app.goo.gl/W8tnoVjvGCebV3nK7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-accent hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-sm transition-colors duration-200 w-fit"
+            >
+              Ver en Google Maps →
+            </a>
+          </div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.7632384234567!2d-76.5!3d3.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f5c1c1c1c1%3A0x1c1c1c1c1c1c1c1c!2sTaller%20Marino%20Perlaza!5e0!3m2!1ses!2sco!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.763238!2d-76.53!3d3.43!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f5c1c1c1c1%3A0x1c1c1c1c1c1c1c1c!2sTaller%20Marino%20Perlaza!5e0!3m2!1ses!2sco!4v1713800000"
             width="100%"
-            height="100%"
+            height="400"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-full"
+            title="Ubicación de Taller Marino Perlaza en Google Maps"
           ></iframe>
         </div>
 
