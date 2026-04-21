@@ -14,18 +14,18 @@ const oilBrands = [
 ];
 
 const carBrands = [
-  { name: 'Renault', logo: '' },
-  { name: 'Chevrolet', logo: '' },
-  { name: 'Kia', logo: '' },
-  { name: 'Mazda', logo: '' },
-  { name: 'Toyota', logo: '' },
-  { name: 'Hyundai', logo: '' },
-  { name: 'Nissan', logo: '' },
-  { name: 'Ford', logo: '' },
-  { name: 'Volkswagen', logo: '' },
-  { name: 'BMW', logo: '' },
-  { name: 'Mercedes-Benz', logo: '' },
-  { name: 'Audi', logo: '' },
+  { name: 'Renault', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Le0sw1CkTQjGZd6KquAm6hn79_oVkPNkuQ&s' },
+  { name: 'Chevrolet', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk_7OT4vS5Yq1ADGrTRy6aZn-EkvCW7x8lzw&s' },
+  { name: 'Kia', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqr1Eh0M2ivKbPfOrcMue28Wumd7pe4r-ATA&s' },
+  { name: 'Mazda', logo: 'https://bucket-periodismodelmotor.s3.eu-west-3.amazonaws.com/wp-content/uploads/2020/12/historia-logo-mazda-.jpg' },
+  { name: 'Toyota', logo: 'https://cdn.worldvectorlogo.com/logos/toyota-car-logo.svg' },
+  { name: 'Hyundai', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_Motor_Company_logo.svg/1280px-Hyundai_Motor_Company_logo.svg.png' },
+  { name: 'Nissan', logo: 'https://cdn.worldvectorlogo.com/logos/nissan-6.svg' },
+  { name: 'Ford', logo: 'https://cdn.worldvectorlogo.com/logos/ford-logo-flat.svg' },
+  { name: 'Volkswagen', logo: 'https://upload.wikimedia.org/wikinews/en/d/d3/Volkswagen_logo.png?utm_source=en.wikinews.org&utm_campaign=index&utm_content=original' },
+  { name: 'BMW', logo: 'https://www.clipartmax.com/png/middle/183-1837795_bmw-bmw-logo.png' },
+  { name: 'Mercedes-Benz', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mercedes-Benz_Logo_2010.svg/1280px-Mercedes-Benz_Logo_2010.svg.png' },
+  { name: 'Audi', logo: 'https://makerworld.bblmw.com/makerworld/model/US8ec7b571d2726d/design/2025-03-23_23aae48e33ffe.png?x-oss-process=image/resize,w_1000/format,webp' },
 ];
 
 export default function BrandsSection() {
