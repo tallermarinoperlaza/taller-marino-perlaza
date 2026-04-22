@@ -5,7 +5,7 @@ export default function PromotionsSection() {
     {
       icon: Zap,
       titulo: "Cambio de Aceite + Filtros",
-      descripcion: "20% de descuento en cambio de aceite sintético con filtros incluidos para clientes nuevos.",
+      descripcion: "10% de descuento en cambio de aceite sintético con filtros incluidos para clientes nuevos.",
       precio: "Desde $100.000",
       color: "text-orange-500"
     },
@@ -90,10 +90,10 @@ export default function PromotionsSection() {
         {/* Promotional Banner */}
         <div className="bg-gradient-to-r from-accent to-orange-500 p-8 rounded-sm text-center">
           <h3 className="text-3xl font-bold text-white mb-4">
-            ¡Primera Visita? Obtén 25% de Descuento
+            ¡Primera Visita? Obtén 10% de Descuento
           </h3>
           <p className="text-white text-lg mb-6">
-            Presenta este cupón en tu primera visita y disfruta de 25% de descuento en cualquier servicio.
+            Presenta este cupón en tu primera visita y disfruta de 10% de descuento en cualquier servicio.
           </p>
           <a
             href="https://wa.me/573173739444?text=Hola%20Taller%20Marino%20Perlaza,%20quiero%20aprovechar%20el%20descuento%20de%20primera%20visita."
