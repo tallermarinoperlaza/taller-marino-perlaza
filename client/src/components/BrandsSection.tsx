@@ -1,16 +1,16 @@
 const oilBrands = [
-  { name: 'ELF', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1C0OMov_0g3DZlCMrx3fJ3w0tXdA8PzdRklSg9Zc5cucLE3SXnJWUfIJ3-8xioxT5SBKUei2Hj5z1nsYwpOEqR4u5mgng&s&ec=121644704' },
-  { name: 'Mobil', logo: '/manus-storage/mobil_db37e24a.png' },
-  { name: 'Motul', logo: '/manus-storage/motul_6ed611dc.png' },
-  { name: 'Hyundai', logo: '/manus-storage/hyundai_3de9d458.png' },
-  { name: 'Pure Guard', logo: 'https://www.pureguard.com/wp-content/uploads/2020/08/PG-GnYel-2014-Logo-Tagline.png' },
-  { name: 'Chevron', logo: 'https://static.vecteezy.com/system/resources/previews/073/495/042/non_2x/chevron-logo-rounded-glossy-icon-with-transparent-background-free-png.png' },
-  { name: 'Havoline', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Havoline_brand_logo.png' },
-  { name: 'Mazda', logo: 'https://dxm.content-center.totalenergies.com/api/wedia/dam/transform/xysh7dg731tah95xpg8jfzbb8e/logo-mazda-totalenergies-jpg.webp?t=resize&width=490&height=342' },
-  { name: 'Total Energies', logo: 'https://cdn.worldvectorlogo.com/logos/total-energies-2025-logo.svg' },
-  { name: 'Petronas', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDxiiX1WK2jOPoQzSlkAkrCZt4NNoNpyngwQ&s' },
-  { name: 'Motorcraft', logo: 'https://cdn.worldvectorlogo.com/logos/motorcraft-logo-1.svg' },
-  { name: 'Kixx', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnCQ3fdCGIAe0quWRbkfKOGOv_QATJ-BO6fw&s' },
+  { name: '', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1C0OMov_0g3DZlCMrx3fJ3w0tXdA8PzdRklSg9Zc5cucLE3SXnJWUfIJ3-8xioxT5SBKUei2Hj5z1nsYwpOEqR4u5mgng&s&ec=121644704' },
+  { name: '', logo: '/manus-storage/mobil_db37e24a.png' },
+  { name: '', logo: '/manus-storage/motul_6ed611dc.png' },
+  { name: '', logo: '/manus-storage/hyundai_3de9d458.png' },
+  { name: '', logo: 'https://www.pureguard.com/wp-content/uploads/2020/08/PG-GnYel-2014-Logo-Tagline.png' },
+  { name: '', logo: 'https://static.vecteezy.com/system/resources/previews/073/495/042/non_2x/chevron-logo-rounded-glossy-icon-with-transparent-background-free-png.png' },
+  { name: '', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Havoline_brand_logo.png' },
+  { name: '', logo: 'https://dxm.content-center.totalenergies.com/api/wedia/dam/transform/xysh7dg731tah95xpg8jfzbb8e/logo-mazda-totalenergies-jpg.webp?t=resize&width=490&height=342' },
+  { name: '', logo: 'https://cdn.worldvectorlogo.com/logos/total-energies-2025-logo.svg' },
+  { name: '', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDxiiX1WK2jOPoQzSlkAkrCZt4NNoNpyngwQ&s' },
+  { name: '', logo: 'https://cdn.worldvectorlogo.com/logos/motorcraft-logo-1.svg' },
+  { name: '', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnCQ3fdCGIAe0quWRbkfKOGOv_QATJ-BO6fw&s' },
 ];
 
 const carBrands = [
