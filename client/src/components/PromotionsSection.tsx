@@ -75,7 +75,7 @@ export default function PromotionsSection() {
 
                 {/* CTA Button */}
                 <a
-                  href="https://wa.me/573173739444?text=Hola%20Taller%20Marino%20Perlaza,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20esta%20promoci%C3%B3n."
+                  href={index === 0 ? "https://wa.me/573173739444?text=Hola%20Taller%20Marino%20Perlaza,%20me%20interesa%20el%20servicio%20de%20Cambio%20de%20Aceite%20%2B%20Filtros%20con%20el%2010%25%20de%20descuento." : index === 2 ? "https://wa.me/573173739444?text=Hola%20Taller%20Marino%20Perlaza,%20me%20interesa%20el%20Paquete%20de%20Servicios%20con%20el%2015%25%20de%20descuento." : "https://wa.me/573173739444?text=Hola%20Taller%20Marino%20Perlaza,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20esta%20promoci%C3%B3n."}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block w-full text-center bg-accent hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-sm transition-colors duration-200"
