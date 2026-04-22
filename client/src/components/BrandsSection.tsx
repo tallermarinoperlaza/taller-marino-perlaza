@@ -9,7 +9,7 @@ const oilBrands = [
   { name: 'Mazda', logo: 'https://dxm.content-center.totalenergies.com/api/wedia/dam/transform/xysh7dg731tah95xpg8jfzbb8e/logo-mazda-totalenergies-jpg.webp?t=resize&width=490&height=342' },
   { name: 'Total Energies', logo: 'https://cdn.worldvectorlogo.com/logos/total-energies-2025-logo.svg' },
   { name: 'Petronas', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDxiiX1WK2jOPoQzSlkAkrCZt4NNoNpyngwQ&s' },
-  { name: 'Motorcraft', logo: 'https://w7.pngwing.com/pngs/1017/507/png-transparent-ford-motor-company-motorcraft-brand-logo-mercury-others-text-label-service.png' },
+  { name: 'Motorcraft', logo: 'https://cdn.worldvectorlogo.com/logos/motorcraft-logo-1.svg' },
   { name: 'Kixx', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnCQ3fdCGIAe0quWRbkfKOGOv_QATJ-BO6fw&s' },
 ];
 
