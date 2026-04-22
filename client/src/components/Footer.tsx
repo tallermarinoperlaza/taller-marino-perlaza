@@ -46,10 +46,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white mb-4">Síguenos</h4>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/tallermarinoperlaza" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background rounded-sm flex items-center justify-center hover:bg-blue-600 transition-colors group" title="Facebook">
+              <a href="https://www.facebook.com/share/1ErjB9yzg6/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background rounded-sm flex items-center justify-center hover:bg-blue-600 transition-colors group" title="Facebook">
                 <Facebook size={18} className="text-accent group-hover:text-white transition-colors" />
               </a>
-              <a href="https://www.instagram.com/tallermarinoperlaza" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background rounded-sm flex items-center justify-center hover:bg-pink-600 transition-colors group" title="Instagram">
+              <a href="https://www.instagram.com/taller_marino_perlaza?igsh=bjZ6NGt4djF5NDUw&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background rounded-sm flex items-center justify-center hover:bg-pink-600 transition-colors group" title="Instagram">
                 <Instagram size={18} className="text-accent group-hover:text-white transition-colors" />
               </a>
             </div>
