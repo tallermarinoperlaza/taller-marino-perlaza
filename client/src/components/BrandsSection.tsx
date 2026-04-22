@@ -1,5 +1,5 @@
 const oilBrands = [
-  { name: 'ELF', logo: '/manus-storage/elf_cc91b211.png' },
+  { name: 'ELF', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1C0OMov_0g3DZlCMrx3fJ3w0tXdA8PzdRklSg9Zc5cucLE3SXnJWUfIJ3-8xioxT5SBKUei2Hj5z1nsYwpOEqR4u5mgng&s&ec=121644704' },
   { name: 'Mobil', logo: '/manus-storage/mobil_db37e24a.png' },
   { name: 'Motul', logo: '/manus-storage/motul_6ed611dc.png' },
   { name: 'Hyundai', logo: '/manus-storage/hyundai_3de9d458.png' },
