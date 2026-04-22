@@ -22,9 +22,9 @@ const carBrands = [
   { name: 'Hyundai', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_Motor_Company_logo.svg/1280px-Hyundai_Motor_Company_logo.svg.png' },
   { name: 'Nissan', logo: 'https://cdn.worldvectorlogo.com/logos/nissan-6.svg' },
   { name: 'Ford', logo: 'https://cdn.worldvectorlogo.com/logos/ford-logo-flat.svg' },
-  { name: 'Volkswagen', logo: 'https://upload.wikimedia.org/wikinews/en/d/d3/Volkswagen_logo.png?utm_source=en.wikinews.org&utm_campaign=index&utm_content=original' },
+  { name: 'Volkswagen', logo: 'https://acnews.blob.core.windows.net/imgnews/paragraph/NPAZ_4a38a3e31f654cfc957ec55b4629a9eb.jpg' },
   { name: 'BMW', logo: 'https://www.clipartmax.com/png/middle/183-1837795_bmw-bmw-logo.png' },
-  { name: 'Mercedes-Benz', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mercedes-Benz_Logo_2010.svg/1280px-Mercedes-Benz_Logo_2010.svg.png' },
+  { name: 'Mercedes-Benz', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwXM7RAjs9XvnCGoNZqOKE_KLu6tYcsMEuw&s' },
   { name: 'Audi', logo: 'https://makerworld.bblmw.com/makerworld/model/US8ec7b571d2726d/design/2025-03-23_23aae48e33ffe.png?x-oss-process=image/resize,w_1000/format,webp' },
 ];
 
