@@ -14,17 +14,17 @@ const oilBrands = [
 ];
 
 const carBrands = [
-  { name: 'Renault', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Le0sw1CkTQjGZd6KquAm6hn79_oVkPNkuQ&s' },
-  { name: 'Chevrolet', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk_7OT4vS5Yq1ADGrTRy6aZn-EkvCW7x8lzw&s' },
-  { name: 'Kia', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqr1Eh0M2ivKbPfOrcMue28Wumd7pe4r-ATA&s' },
-  { name: 'Mazda', logo: 'https://bucket-periodismodelmotor.s3.eu-west-3.amazonaws.com/wp-content/uploads/2020/12/historia-logo-mazda-.jpg' },
-  { name: 'Toyota', logo: 'https://cdn.worldvectorlogo.com/logos/toyota-car-logo.svg' },
-  { name: 'Hyundai', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_Motor_Company_logo.svg/1280px-Hyundai_Motor_Company_logo.svg.png' },
-  { name: 'Nissan', logo: 'https://cdn.worldvectorlogo.com/logos/nissan-6.svg' },
-  { name: 'Ford', logo: 'https://cdn.worldvectorlogo.com/logos/ford-logo-flat.svg' },
+  { name: '', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Le0sw1CkTQjGZd6KquAm6hn79_oVkPNkuQ&s' },
+  { name: '', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk_7OT4vS5Yq1ADGrTRy6aZn-EkvCW7x8lzw&s' },
+  { name: '', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqr1Eh0M2ivKbPfOrcMue28Wumd7pe4r-ATA&s' },
+  { name: '', logo: 'https://bucket-periodismodelmotor.s3.eu-west-3.amazonaws.com/wp-content/uploads/2020/12/historia-logo-mazda-.jpg' },
+  { name: '', logo: 'https://cdn.worldvectorlogo.com/logos/toyota-car-logo.svg' },
+  { name: '', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_Motor_Company_logo.svg/1280px-Hyundai_Motor_Company_logo.svg.png' },
+  { name: '', logo: 'https://cdn.worldvectorlogo.com/logos/nissan-6.svg' },
+  { name: '', logo: 'https://cdn.worldvectorlogo.com/logos/ford-logo-flat.svg' },
   { name: 'Volkswagen', logo: 'https://acnews.blob.core.windows.net/imgnews/paragraph/NPAZ_4a38a3e31f654cfc957ec55b4629a9eb.jpg' },
-  { name: 'BMW', logo: 'https://www.clipartmax.com/png/middle/183-1837795_bmw-bmw-logo.png' },
-  { name: 'Mercedes-Benz', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwXM7RAjs9XvnCGoNZqOKE_KLu6tYcsMEuw&s' },
+  { name: '', logo: 'https://www.clipartmax.com/png/middle/183-1837795_bmw-bmw-logo.png' },
+  { name: '', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwXM7RAjs9XvnCGoNZqOKE_KLu6tYcsMEuw&s' },
   { name: 'Audi', logo: 'https://makerworld.bblmw.com/makerworld/model/US8ec7b571d2726d/design/2025-03-23_23aae48e33ffe.png?x-oss-process=image/resize,w_1000/format,webp' },
 ];
 
