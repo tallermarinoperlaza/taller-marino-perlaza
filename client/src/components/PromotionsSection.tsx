@@ -6,7 +6,7 @@ export default function PromotionsSection() {
       icon: Zap,
       titulo: "Cambio de Aceite + Filtros",
       descripcion: "20% de descuento en cambio de aceite sintético con filtros incluidos para clientes nuevos.",
-      precio: "Desde $45.000",
+      precio: "Desde $100.000",
       color: "text-orange-500"
     },
     {
