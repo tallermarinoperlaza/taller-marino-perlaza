@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /__manus__/
+
+Sitemap: https://www.tallermarinoperlaza.com/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Otros buscadores
+User-agent: *
+Allow: /
