@@ -47,7 +47,7 @@ export default function BrandsSection() {
           <h3 className="text-3xl font-bold text-white mb-8">
             Trabajamos con las mejores marcas del mercado
           </h3>
-          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-6 gap-3 justify-items-center">
+          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-9 gap-2 justify-items-center">
             {oilBrands.map((brand, index) => (
               <div
                 key={index}

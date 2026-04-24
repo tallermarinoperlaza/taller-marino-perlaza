@@ -6,7 +6,7 @@ const galleryImages = [
   },
   {
     title: 'Lámina y Pintura - Antes',
-    image: '/manus-storage/542e4d41-5084-4a75-a457-c92306a5d917_963e03b6.jpg',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663455322151/FLskSa64sSEiX3FbGopjSq/542e4d41-5084-4a75-a457-c92306a5d917_963e03b6.jpg',
     description: 'Vehículo antes del servicio de lámina y pintura',
   },
   {
@@ -16,7 +16,7 @@ const galleryImages = [
   },
   {
     title: 'Lámina y Pintura - Después',
-    image: '/manus-storage/IMG_3603_76de792d.jpeg',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663455322151/FLskSa64sSEiX3FbGopjSq/IMG_3603_76de792d.jpeg',
     description: 'Vehículo restaurado con pintura de calidad profesional',
   },
   {
