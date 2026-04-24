@@ -5,6 +5,8 @@ export default function TestimonialsSection() {
   const [showCommentForm, setShowCommentForm] = useState(false);
   const [comments, setComments] = useState<Array<{ id: number; nombre: string; comentario: string }>>([]);
   const [formData, setFormData] = useState({ nombre: '', comentario: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const testimonials = [
     {
@@ -57,11 +59,39 @@ export default function TestimonialsSection() {
     }
   ];
 
-  const handleAddComment = () => {
+  const handleAddComment = async () => {
     if (formData.nombre.trim() && formData.comentario.trim()) {
-      setComments([...comments, { ...formData, id: Date.now() }]);
-      setFormData({ nombre: '', comentario: '' });
-      setShowCommentForm(false);
+      setIsSubmitting(true);
+      try {
+        // Enviar a Formspree
+        const response = await fetch('https://formspree.io/f/xyzgqbpq', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            nombre: formData.nombre,
+            comentario: formData.comentario,
+            fecha: new Date().toLocaleString('es-CO'),
+          }),
+        });
+
+        if (response.ok) {
+          // Mostrar en la página también
+          setComments([...comments, { ...formData, id: Date.now() }]);
+          setFormData({ nombre: '', comentario: '' });
+          setShowCommentForm(false);
+          setSubmitMessage('¡Comentario enviado! Gracias por tu feedback.');
+          setTimeout(() => setSubmitMessage(''), 3000);
+        } else {
+          setSubmitMessage('Error al enviar. Intenta de nuevo.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        setSubmitMessage('Error al enviar. Intenta de nuevo.');
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -170,10 +200,17 @@ export default function TestimonialsSection() {
               />
               <button
                 onClick={handleAddComment}
-                className="w-full bg-accent text-background py-2 rounded-sm hover:bg-orange-600 transition-colors font-semibold"
+                disabled={isSubmitting}
+                className="w-full bg-accent text-background py-2 rounded-sm hover:bg-orange-600 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Enviar comentario
+                {isSubmitting ? 'Enviando...' : 'Enviar comentario'}
               </button>
+            </div>
+          )}
+
+          {submitMessage && (
+            <div className="bg-accent/20 border border-accent text-accent px-4 py-3 rounded-sm mb-8 text-sm">
+              {submitMessage}
             </div>
           )}
 
