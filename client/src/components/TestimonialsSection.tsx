@@ -9,50 +9,50 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      nombre: "Carlos Mendoza",
+      nombre: "Carlos M.",
       vehiculo: "Toyota Corolla 2018",
       calificacion: 5,
-      texto: "Excelente servicio. Llevé mi vehículo para cambio de aceite y revisión general. El equipo es muy profesional y honesto. Recomiendo ampliamente a Taller Marino Perlaza.",
+      texto: "Ey, llevé mi carro para el cambio de aceite y quedó impecable. Don Marino es muy honesto, no te cobra cosas que no necesitas. Volví varias veces ya.",
       iniciales: "CM"
     },
     {
       id: 2,
-      nombre: "María García",
+      nombre: "María",
       vehiculo: "Chevrolet Cruze 2020",
       calificacion: 5,
-      texto: "Muy satisfecha con el trabajo realizado. Repararon los frenos de mi auto con excelencia. El personal es atento y explica bien cada procedimiento. Volveré con confianza.",
+      texto: "Me repararon los frenos y la verdad quedó muy bien. El muchacho me explico todo paso a paso. Recomendado, no me arrepiento.",
       iniciales: "MG"
     },
     {
       id: 3,
-      nombre: "Juan Rodríguez",
+      nombre: "Juan",
       vehiculo: "Mazda 3 2019",
       calificacion: 5,
-      texto: "Se nota la experiencia de Don Marino y su equipo. Hicieron un trabajo impecable en la sincronización de mi motor. Precio justo y garantía en los productos. ¡Recomendado!",
+      texto: "Sinceramente Don Marino sabe mucho del tema. Me arregló la sincroniación del motor y el carro anda como nuevo. Precio justo, eso es lo que me gusta.",
       iniciales: "JR"
     },
     {
       id: 4,
-      nombre: "Patricia López",
+      nombre: "Patricia",
       vehiculo: "Hyundai Elantra 2021",
       calificacion: 5,
-      texto: "Servicio rápido y eficiente. Hicieron diagnóstico técnico a mi vehículo y encontraron un problema que otros talleres no habían detectado. Muy recomendado.",
+      texto: "Fui porque me dijeron que estaba dañado pero no sabía qué era. Ellos me lo diagnosticaron bien rápido y me lo arreglaron. Otros talleres ni me lo habían visto.",
       iniciales: "PL"
     },
     {
       id: 5,
-      nombre: "Roberto Sánchez",
+      nombre: "Roberto",
       vehiculo: "Kia Picanto 2020",
       calificacion: 5,
-      texto: "Excelente atención. El cambio de aceite y filtros quedó perfecto. El personal explica cada paso y da recomendaciones valiosas. Definitivamente volveré.",
+      texto: "Cambio de aceite y filtros, todo bien. La atención es buena, te explican que le van a hacer al carro. Voy a volver cuando toque el proximo servicio.",
       iniciales: "RS"
     },
     {
       id: 6,
-      nombre: "Alejandra Ruiz",
+      nombre: "Alejandra",
       vehiculo: "Volkswagen Jetta 2019",
       calificacion: 5,
-      texto: "Reparación de lámina y pintura de primera calidad. Mi taxi quedó como nuevo. El trabajo es impecable y los precios son justos. ¡Gracias Marino!",
+      texto: "Mi taxi estaba todo rayado y golpeado. Lo llevé y quedó como nuevo, la pintura brilla. Los precios son buenos comparado con otros lados. Muy recomendado!",
       iniciales: "AR"
     }
   ];
